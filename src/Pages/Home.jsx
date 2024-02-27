@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card } from "../Components";
 
+//rendering cards and passing the props to Card component.
 const RenderCards = ({data,title}) => {
     if(data?.length > 0) {
       return data.map((post) => <Card key = {post.id} {...post} />)
@@ -14,7 +15,7 @@ const RenderCards = ({data,title}) => {
       )
     }
 const Home = () => {
-
+//fetch products from API.
      const [allProducts, setAllProducts] = useState(null);
     useEffect(() => {
 
