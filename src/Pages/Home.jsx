@@ -25,9 +25,7 @@ const Home = () => {
 
             if(response.status === 200) {
                 const result = response.data.products;
-                console.log(result);
-                setAllProducts(result);
-                console.log(allProducts);
+                setAllProducts(result);     
             }
                 } catch (error) {
          alert(error)
